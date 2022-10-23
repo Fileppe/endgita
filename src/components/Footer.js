@@ -18,8 +18,9 @@ function Footer() {
                             <h2>I nostri social</h2>
                             <div className="container-icon">
                                 <i className="bi bi-facebook" style={{ fontSize: "2rem" }}></i>
-                                <i className="bi bi-instagram" style={{ fontSize: "2rem", marginLeft: "7px" }}></i>
-                                <i className="bi bi-whatsapp" style={{ fontSize: "2rem", marginLeft: "7px" }}></i>
+                                <i className="bi bi-instagram" style={{ fontSize: "2rem", marginLeft: "20px" }}></i>
+                                <i className="bi bi-whatsapp" style={{ fontSize: "2rem", marginLeft: "20px" }}></i>
+                                <i className="bi bi-linkedin" style={{ fontSize: "2rem", marginLeft: "20px" }}></i>
                             </div>
                         </div>
                         <div className="col-lg-3">

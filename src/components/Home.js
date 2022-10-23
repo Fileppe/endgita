@@ -2,7 +2,7 @@ import Caurosel from "./Caurosel";
 function Home() {
     return (
         <div className="home">
-            <Caurosel/>
+            <Caurosel />
             <div className="chisiamo">
                 <div className="container mt-5 pt-5 mb-5 pb-5">
                     <div className="row">
@@ -55,28 +55,58 @@ function Home() {
 
 
             <div className="contatti">
-                <div className="container mt-5 pt-5 pb-5">
-                    <div className="row">
-                        <div className="col-lg-6 offset-lg-3">
-                            <h2 className="text-center">Contatti</h2>
-                            <form method="POST" action="functions/send.php">
-                                <div className="mb-3">
-                                    <label for="nome" className="form-label">Il tuo nome</label>
-                                    <input name="nome" type="text" className="form-control" id="nome" aria-describedby="nome" />
+                <div className="container-fluid px-5 my-5">
+                    <div className="row justify-content-center">
+                        <div className="col-xl-10">
+                            <div className="col-12 text-center mb-5">
+                                <h2>Contatti</h2>
+                            </div>
+                            <div className="card border-0 rounded-3 shadow-lg overflow-hidden">
+                                <div className="card-body p-0">
+                                    <div className="row g-0">
+                                        <div className="col-sm-6 d-none d-sm-block bg-image"></div>
+                                        <div className="col-sm-6 p-4">
+                                            <div className="text-center">
+                                                <div className="h3 fw-light">Form di contatto</div>
+                                                <p className="mb-4 text-muted">Split layout contact form</p>
+                                            </div>
+
+
+                                            <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+
+                                                <div className="form-floating mb-3">
+                                                    <input className="form-control" id="name" type="text" placeholder="Name" data-sb-validations="required" />
+                                                    <label for="name">Nome</label>
+                                                    <div className="invalid-feedback" data-sb-feedback="name:required">Il nome è obbligatorio.</div>
+                                                </div>
+
+                                                <div className="form-floating mb-3">
+                                                    <input className="form-control" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required,email" />
+                                                    <label for="emailAddress">Email</label>
+                                                    <div className="invalid-feedback" data-sb-feedback="emailAddress:required">L'indirizzo Email è obbligatorio</div>
+                                                    <div className="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
+                                                </div>
+
+                                                <div className="form-floating mb-3">
+                                                    <textarea className="form-control" id="message" type="text" placeholder="Message" style={{height: "10rem;"}} data-sb-validations="required"></textarea>
+                                                    <label for="message">Messaggio</label>
+                                                    <div className="invalid-feedback" data-sb-feedback="message:required">Il messaggio è obbligatorio</div>
+                                                </div>
+
+                                                <div className="d-grid">
+                                                    <button className="btn btn-primary btn-lg" id="submitButton" type="submit">Invia</button>
+                                                </div>
+                                            </form>
+
+                                        </div>
+                                    </div>
+
                                 </div>
-                                <div className="mb-3">
-                                    <label for="email" className="form-label">La tua mail</label>
-                                    <input name="email" type="email" className="form-control" id="email" />
-                                </div>
-                                <div className="mb-3">
-                                    <label for="massaggio" className="form-label">Messaggio</label>
-                                    <textarea name="messaggio" id="messaggio" className="form-control" cols="30" rows="10"></textarea>
-                                </div>
-                                <button type="submit" className="btn btn-primary">Invia</button>
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
             </div>
         </div>
 
